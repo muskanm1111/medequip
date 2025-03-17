@@ -1,0 +1,51 @@
+[
+    {
+        "id":1,
+      "category": "Wellness Supplements",
+      "title": "Immune Boost Vitamin C Capsules",
+      "short_description": "Strengthen your immunity with our high-potency Vitamin C formula.",
+      "image":"/img/1742206308403dbcvxq74.png",
+      "description": "Packed with essential antioxidants, these capsules help support your immune system, promote healthy skin, and enhance overall well-being."
+    },
+    {
+      "id": 2,
+      "category": "Skincare",
+      "title": "Hydrating Facial Serum",
+      "short_description": "Rejuvenate your skin with deep hydration and nourishment.",
+      "image":"/img/cream.png",
+      "description": "Infused with hyaluronic acid and vitamin E, this lightweight serum hydrates your skin, reduces fine lines, and restores your natural glow."
+    },
+    {
+      "id": 3,
+      "category": "Pain Relief",
+      "title": "Muscle Relaxant Gel",
+      "short_description": "Instant relief for sore and aching muscles.",
+      "image":"/img/gel.jpg",
+      "description": "Our fast-absorbing gel provides targeted relief for muscle pain, stiffness, and joint discomfort, perfect for post-workout recovery."
+    },
+    {
+      "id": 4,
+      "category": "Mental Wellness",
+      "title": "Herbal Stress Relief Tea",
+      "short_description": "A calming blend of natural herbs for relaxation.",
+      "image":"/img/powder.png",
+      "description": "This caffeine-free tea is crafted with chamomile, ashwagandha, and lavender to help ease stress, improve sleep, and support mental well-being."
+    },
+    {
+      "id": 5,
+      "category": "Weight Management",
+      "title": "Natural Detox Green Tea",
+      "short_description": "Cleanse and refresh with a natural detox.",
+      "image":"/img/1742205970724f5dizfxx.png",
+      "description": "A blend of green tea, lemon, and ginger, designed to boost metabolism, aid digestion, and support weight management."
+    },
+    {
+      "id": 6,
+      "category": "Daily Essentials",
+      "title": "Multivitamin Gummies",
+      "short_description": "A delicious way to get your daily nutrients.",
+      "image":"/img/Stress-Relief-Herbal-Tea-Tisane-JiViSa-758.webp",
+      "description": "These tasty gummies provide essential vitamins and minerals to support overall health, boost energy, and improve immunity."
+    }
+  ]
+

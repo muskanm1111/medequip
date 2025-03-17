@@ -7,63 +7,47 @@ import Faq from "@/components/faq";
 import Imgabout from "@/components/imgabout";
 import Process from "@/components/process";
 import Product from "@/components/product";
+import ProductCard from "@/components/product-card";
 import Ratecard from "@/components/ratecard";
 import Testimonials from "@/components/testinomials";
-import Testinomials from "@/components/testinomials";
-import Image from "next/image";
-import Link from "next/link";
+import { fetchProduct } from "@/utils/Api";
+import { useEffect, useState } from "react";
 
-const health = [
-  {
-    img: "/img/service__item-1.png",
-    title: "Harbor Health",
-    desc: "Et purus duis sollicitudin sed dign issim habi Et purus",
-  },
-  {
-    img: "/img/service__item-2.png",
-    title: "Harbor Health",
-    desc: "Et purus duis sollicitudin sed dign issim habi Et purus",
-  },
-  {
-    img: "/img/service__item-3.png",
-    title: "Harbor Health",
-    desc: "Et purus duis sollicitudin sed dign issim habi Et purus",
-  },
-  {
-    img: "/img/service__item-4.png",
-    title: "Harbor Health",
-    desc: "Et purus duis sollicitudin sed dign issim habi Et purus",
-  },
-];
-
-const pricecard = [
-  {
-    title: "consult",
-    price: "$19",
-  },
-  {
-    title: "Intensive",
-    price: "$40",
-  },
-  {
-    title: "private",
-    price: "$99",
-  },
-];
 
 export default function Home() {
+
+      const [products , setProducts] = useState([]);
+  
+      useEffect(()=>{
+          const fetchData = async () => {
+              const data = await fetchProduct();
+              setProducts(data)
+          };
+          fetchData();
+      },[])
+
+
   return (
     <section className="bg-gradient-to-b from-blue-200 via-blue-100 to-blue-50">
-
-       <Banner />
-       <Card />
-        <About />
+      <Banner />
+      <Card />
+      <About />
       <Process />
+      <div className="bg-white py-16">
+        <h1 className=" md:text-5xl mb-8 text-gray-800 text-5xl text-center mx-auto w-full ">
+          Fetaure Products
+        </h1>
+        <div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-8  max-w-7xl mx-auto">
+          {products.slice(0, 3).map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
       <Imgabout />
       <Testimonials />
       <Ratecard />
       <Faq />
-      
+
       <Blog />
       <Product />
     </section>
