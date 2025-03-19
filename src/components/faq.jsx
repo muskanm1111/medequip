@@ -11,9 +11,9 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
 export default function Faq({className} ) {
-  const [activeItem, setActiveItem] = useState("item-1"); // Set first item as default open
 
-  // FAQ data array
+  const [activeItem, setActiveItem] = useState("item-1"); 
+  
   const faqItems = [
     {
       id: "item-1",

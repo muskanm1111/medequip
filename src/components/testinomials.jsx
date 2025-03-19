@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Testimonials = () => {
@@ -32,11 +33,10 @@ const Testimonials = () => {
           Testimonial
         </h4>
         <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2">
-          Feedback from Our{" "}
+          Feedback from Our
           <span className="text-violet-500 italic">Valued Clients</span>
         </h2>
-      
-      </div>
+       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 max-w-7xl p-6 mx-auto">
         {testimonials.map((testimonial, index) => (
@@ -44,11 +44,13 @@ const Testimonials = () => {
             key={index}
             className="bg-white shadow-lg rounded-2xl p-8 text-center"
           >
-            <p className="text-gray-700 italic">"{testimonial.feedback}"</p>
+            <p className="text-gray-700 italic">&quot;{testimonial.feedback}&quot;</p>
             <div className="mt-4 flex items-center justify-center">
-              <img
+              <Image
                 src={testimonial.image}
                 alt={testimonial.name}
+                width={400}
+                height={600}
                 className="w-12 h-12 rounded-full border-2 border-violet-500"
               />
               <div className="ml-3">
