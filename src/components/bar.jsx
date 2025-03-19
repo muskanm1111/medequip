@@ -12,12 +12,12 @@ export default function Bar() {
 
   return (
     <div className="bg-violet-50 min-h-screen ">
-      {/* Header Section */}
+     
       <div className="max-w-7xl mx-auto px-4 py-12 pb-32">
-        {/* Main Content Card */}
+      
         <div className="bg-white rounded-lg shadow-md ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-            {/* Left Column - Image */}
+           
             <div className="relative h-[300px] md:h-auto rounded-lg">
               <Image
                 src="/img/ab.jpg"
@@ -27,7 +27,6 @@ export default function Bar() {
               />
             </div>
 
-            {/* Right Column - Content */}
             <div className="space-y-6">
               <div className="uppercase text-sm font-semibold text-gray-700">
                 ABOUT US
@@ -43,7 +42,7 @@ export default function Bar() {
                 tellus, luctus nec
               </p>
 
-              {/* Metrics */}
+            
               <div className="space-y-3 pt-4">
                 {metrics.map((metric) => (
                   <div key={metric.name} className="space-y-1">
@@ -81,7 +80,7 @@ export default function Bar() {
             </div>
           </div>
 
-          {/* Vision and Mission Boxes */}
+          
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Process = () => {
@@ -22,28 +23,30 @@ const Process = () => {
   return (
     <section className="   lg:h-[180vh]  px-4 md:px-16 lg:px-2 py-20 ">
       <div className="max-w-7xl mx-auto">
-        {/* Image Container */}
+
         <div className="relative bg-violet-400 rounded-xl md:rounded-[80px]">
           <div className="border-[12px] md:border-[24px] border-violet-400 rounded-xl md:rounded-[80px] overflow-hidden">
-            <img
+            <Image
               src="/img/big.jpg"
+              width={400}
+              height={600}
               alt="Construction Equipment"
               className="w-full h-auto object-cover aspect-[9/16] lg:aspect-auto rounded-xl md:rounded-[80px]"
             />
           </div>
-          {/* Info Box */}
+         
           <div className="absolute bottom-1/2 lg:bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white shadow-lg rounded-lg p-8  w-[90%] lg:w-5/6">
             <h4 className="text-xs md:text-sm uppercase text-gray-500 font-semibold text-center">
               How It Works
             </h4>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 text-center mt-2">
-              How Our{" "}
+              How Our
               <span className="text-violet-500 italic">Rental Process</span>{" "}
               Works
             </h2>
-            {/* Steps */}
+           
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8  mt-6">
-              {/* Step 1 */}
+              
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm  relative ">
                 <div className="bg-violet-400 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
                   1
@@ -56,7 +59,7 @@ const Process = () => {
                 </p>
               </div>
 
-              {/* Step 2 */}
+              
               <div className="bg-white rounded-lg p-6 border border-violet-200 shadow-sm relative">
                 <div className="bg-violet-400 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
                   2
@@ -69,7 +72,7 @@ const Process = () => {
                 </p>
               </div>
 
-              {/* Step 3 */}
+              
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm relative">
                 <div className="bg-violet-400 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
                   3

@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section className=" py-16 px-4 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-2xl">
-        {/* Left Image Section */}
+       
         <div className="relative h-[300px] md:h-auto">
           <Image
             src="/img/contact.jpg"
@@ -16,7 +16,7 @@ const Contact = () => {
           />
           <div className="absolute inset-0 bg-violet-900/30 backdrop-blur-sm md:backdrop-blur-0"></div>
 
-          {/* Floating info card - visible on larger screens */}
+          
           <div className="hidden md:block absolute bottom-8 left-8 right-8 bg-gray-900/80 backdrop-blur-sm p-10 rounded-xl border border-violet-500/30 shadow-lg">
             <h3 className="text-xl font-bold text-white mb-3">Get in Touch</h3>
             <div className="flex items-center space-x-3 text-gray-200 mb-2">
@@ -51,14 +51,14 @@ const Contact = () => {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span>info@yourcompany.com</span>
+              <span>abc@.com</span>
             </div>
           </div>
         </div>
 
-        {/* Right Form Section */}
+      
         <div className="bg-gray-800 text-white p-8 md:p-12 relative">
-          {/* Decorative elements */}
+       
           <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-violet-600/10 rounded-full -ml-12 -mb-12 blur-xl"></div>
 
@@ -76,7 +76,7 @@ const Contact = () => {
               tellus, luctus nec ullamcorper mattis.
             </p>
 
-            {/* Contact Form */}
+            
             <div className="bg-gray-900/60 p-6 rounded-xl mt-6 border border-violet-500/20 shadow-lg backdrop-blur-sm">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>

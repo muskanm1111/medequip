@@ -40,7 +40,7 @@ const Header = () => {
           </a>
         </div>
 
-        {/* Appointment Button */}
+      
         <div className="hidden md:block">
           <button className="bg-violet-500 hover:bg-violet-600 text-white px-6 py-2 rounded-lg font-semibold">
             MAKE APPOINTMENT

@@ -7,9 +7,9 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-gray-400">
-      {/* Top Bar with Logo and Social Icons */}
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row justify-between items-center border-b border-gray-800">
-        {/* Logo */}
+     
         <div className="flex items-center mb-4 sm:mb-0">
           <div className="flex items-center">
             <Link
@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social Icons */}
+        
         <div className="flex">
           <Link
             href="#"
@@ -61,10 +61,10 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Main Footer Content */}
+   
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
-          {/* Information Column */}
+         
           <div>
             <h3 className="text-white uppercase text-sm tracking-wider font-medium mb-6">
               INFORMATION
@@ -93,7 +93,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Properties Column */}
+         
           <div>
             <h3 className="text-white uppercase text-sm tracking-wider font-medium mb-6">
               PROPERTIES
@@ -127,7 +127,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Locations Column */}
+        
           <div>
             <h3 className="text-white uppercase text-sm tracking-wider font-medium mb-6">
               LOCATIONS
@@ -161,7 +161,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Useful Links & About Column */}
+       
           <div>
             <div className="mb-10">
               <h3 className="text-white uppercase text-sm tracking-wider font-medium mb-6">

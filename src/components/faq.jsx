@@ -56,7 +56,7 @@ export default function Faq({className} ) {
     <div className={`bg-violet-50  ${className}`}>
       <div className="max-w-7xl mx-auto px-4 py-12 ">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {/* Left Column */}
+         
           <div className="space-y-6">
             <div className="space-y-1">
               <h3 className="text-lg font-medium text-muted-foreground">
@@ -83,7 +83,7 @@ export default function Faq({className} ) {
             </div>
           </div>
 
-          {/* Right Column - Accordion */}
+        
           <div className="space-y-4">
             <Accordion
               type="single"

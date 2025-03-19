@@ -46,7 +46,7 @@ export default function About({className}) {
           </div>
         </div>
 
-        {/* Main Content */}
+        
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Left Image Section */}
           <div className="lg:col-span-5">
@@ -62,7 +62,7 @@ export default function About({className}) {
             </div>
           </div>
 
-          {/* Right Features Grid */}
+          
           <div className="lg:col-span-7">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {features.map((feature, index) => (
@@ -76,7 +76,7 @@ export default function About({className}) {
   );
 }
 
-// Feature Card Component
+
 function FeatureCard({ icon, title, description }) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">

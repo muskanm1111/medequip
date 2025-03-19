@@ -6,7 +6,7 @@ export default function Home() {
     <div className=" min-h-screen mt-28">
       <div className="max-w-7xl mx-auto px-4 py-8 md:py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-          {/* Left Content Section */}
+        
           <div className="lg:col-span-4 space-y-4 order-1 ">
             <h3 className="text-sm sm:text-base md:text-lg uppercase font-medium tracking-wide">
               WELCOME TO medequip
@@ -25,41 +25,10 @@ export default function Home() {
               DISCOVER MORE
             </button>
 
-            {/* <div className="flex items-center mt-8 space-x-2">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full border-2 border-white overflow-hidden"
-                  >
-                    <Image
-                      src={`/img/banner.png`}
-                      alt={`Client ${i}`}
-                      width={32}
-                      height={32}
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center space-x-1">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <svg
-                    key={i}
-                    className="w-4 h-4 text-orange-500"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-                <span className="font-bold text-lg ml-1">4.9</span>
-              </div>
-            </div> */}
             <p className="text-sm text-gray-600">Trusted by 2k+ Client</p>
           </div>
 
-          {/* Center Image Section */}
+        
           <div className="lg:col-span-5 order-2 lg:order-2 mt-6 lg:mt-0">
             <div className="relative bg-violet-500 rounded-lg  h-[300px] sm:h-[400px] md:h-[500px]">
               <Image
@@ -79,7 +48,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Find Equipment Section */}
+        
           <div className="lg:col-span-3 order-3 lg:order-3">
             <div className="bg-gray-100 rounded-lg p-6 shadow-sm">
               <div className="relative w-full h-40 mb-6 rounded-xl overflow-hidden">
