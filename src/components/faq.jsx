@@ -1,48 +1,122 @@
-import Image from "next/image";
-import React from "react";
+"use client";
 
-const Faq = () => {
+import { useEffect, useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
+
+export default function Faq({className} ) {
+  const [activeItem, setActiveItem] = useState("item-1"); // Set first item as default open
+
+  // FAQ data array
+  const faqItems = [
+    {
+      id: "item-1",
+      question: "What types of machinery and equipment do you rent?",
+      answer:
+        "We offer a wide range of machinery and equipment including construction equipment, industrial tools, and heavy machinery. Our inventory includes excavators, loaders, forklifts, generators, and more.",
+    },
+    {
+      id: "item-2",
+      question: "How do I make a rental reservation?",
+      answer:
+        "You can make a rental reservation by calling our customer service line, visiting one of our locations, or using our online reservation system. We recommend booking in advance to ensure availability, especially for specialized equipment.",
+    },
+    {
+      id: "item-3",
+      question: "What is the rental period for your equipment?",
+      answer:
+        "Our rental periods are flexible and can be customized to your needs. We offer daily, weekly, and monthly rental options. For long-term projects, we also provide extended rental agreements with special rates.",
+    },
+    {
+      id: "item-4",
+      question: "Do you offer delivery and pickup services?",
+      answer:
+        "Yes, we offer delivery and pickup services for all our equipment. Delivery fees are based on distance and equipment size. We can arrange for convenient delivery times to match your project schedule.",
+    },
+    {
+      id: "item-5",
+      question:
+        "What should I do if the equipment malfunctions during the rental period?",
+      answer:
+        "If you experience any issues with the equipment, contact our 24/7 support line immediately. We'll either guide you through troubleshooting or arrange for a replacement. All our equipment is regularly maintained, but in case of unexpected issues, we ensure minimal downtime for your project.",
+    },
+  ];
+
+  const handleAccordionChange = (value) => {
+    setActiveItem(value);
+  };
+
   return (
-    <div className="mt-20 md:mt-40 mb-16">
-      <h2 className="md:text-5xl text-5xl text-center mx-auto w-full mb-4 text-blue-950">
-       FAQ
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 mx-auto max-w-6xl ">
-        <div className="p-4 md:p-6 rounded-lg space-y-4 order-2 md:order-1">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl text-blue-950 font-bold">
-            Healing Harmony Uniting Care and Compassion
-          </h1>
-          <div className="space-y-4 mt-6">
-            <h2 className="text-lg font-semibold bg-white rounded-2xl p-4 md:p-5 shadow-sm">
-              How your path to ultimate wellness begins
-            </h2>
-            <h2 className="text-lg font-semibold bg-white rounded-2xl p-4 md:p-5 shadow-sm">
-              What treatments are right for your condition
-            </h2>
-            <div className="bg-white rounded-2xl p-4 md:p-5 shadow-sm">
-              <h2 className="text-lg font-semibold mb-2">Last mile delivery</h2>
-              <p className="text-gray-700">
-                Et purus duis sollicitudin dignissim habitant. Egestas nulla
-                quis venenatis cras sed eu massa eu faucibus. Urna fusce Et
-                purus duis sollicitudin dignissim habitant.
-              </p>
+    <div className={`bg-violet-50  ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 py-12 ">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          {/* Left Column */}
+          <div className="space-y-6">
+            <div className="space-y-1">
+              <h3 className="text-lg font-medium text-muted-foreground">
+                FAQS
+              </h3>
+              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+                Common Inquiries{" "}
+                <span className="block lg:inline">
+                  and <span className="text-violet-500">Solutions</span>
+                </span>
+              </h2>
+            </div>
+            <p className="max-w-md text-muted-foreground">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec
+            </p>
+            <div>
+              <Button
+                className="bg-violet-500 hover:bg-violet-500 text-white"
+                size="lg"
+              >
+                SEE MORE FAQS
+              </Button>
             </div>
           </div>
-        </div>
-        <div className="flex justify-center items-center p-4 md:p-6 rounded-lg order-1 md:order-2">
-          <div className="relative w-full max-w-md aspect-square">
-            <Image
-              src="/img/ask-question.png"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              alt="FAQ illustration"
-              className="object-contain"
-            />
+
+          {/* Right Column - Accordion */}
+          <div className="space-y-4">
+            <Accordion
+              type="single"
+              defaultValue="item-1"
+              className="w-full"
+              onValueChange={handleAccordionChange}
+            >
+              {faqItems.map((item) => (
+                <AccordionItem
+                  key={item.id}
+                  value={item.id}
+                  className="border rounded-lg overflow-hidden"
+                >
+                  <AccordionTrigger
+                    className={`px-6 py-4 hover:no-underline ${
+                      activeItem === item.id
+                        ? "bg-violet-500 text-white hover:bg-violet-500 data-[state=open]:bg-violet-500"
+                        : "bg-white hover:bg-gray-50"
+                    }`}
+                  >
+                    <span className="text-left font-medium text-lg">
+                      {item.question}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 py-4 text-base">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Faq;
+}

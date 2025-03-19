@@ -1,175 +1,156 @@
+import Image from "next/image";
 import React from "react";
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <section className="py-12 px-4 bg-gradient-to-b from-blue-50 to-white">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-gray-800">
-          Contact Us
-        </h1>
-       
+    <section className=" py-16 px-4 md:px-16 lg:px-24">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-2xl">
+        {/* Left Image Section */}
+        <div className="relative h-[300px] md:h-auto">
+          <Image
+            src="/img/contact.jpg"
+            alt="Contact Us"
+            width={800}
+            height={1200}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-violet-900/30 backdrop-blur-sm md:backdrop-blur-0"></div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Send us a Message
+          {/* Floating info card - visible on larger screens */}
+          <div className="hidden md:block absolute bottom-8 left-8 right-8 bg-gray-900/80 backdrop-blur-sm p-10 rounded-xl border border-violet-500/30 shadow-lg">
+            <h3 className="text-xl font-bold text-white mb-3">Get in Touch</h3>
+            <div className="flex items-center space-x-3 text-gray-200 mb-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-violet-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <span>+1 234 567 8900</span>
+            </div>
+            <div className="flex items-center space-x-3 text-gray-200">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-violet-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <span>info@yourcompany.com</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Form Section */}
+        <div className="bg-gray-800 text-white p-8 md:p-12 relative">
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-violet-600/10 rounded-full -ml-12 -mb-12 blur-xl"></div>
+
+          <div className="relative">
+           
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+              <span className="italic text-violet-400">Contact Us</span> for
+              <span className="relative">
+                Assistance
+                <span className="absolute -bottom-1 left-0 right-0 h-1 bg-violet-500/30 rounded-full"></span>
+              </span>
             </h2>
-            <form>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <p className="text-gray-300 mt-4 max-w-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis.
+            </p>
+
+            {/* Contact Form */}
+            <div className="bg-gray-900/60 p-6 rounded-xl mt-6 border border-violet-500/20 shadow-lg backdrop-blur-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label
-                    htmlFor="firstName"
-                    className="block text-gray-700 mb-2"
-                  >
+                  <label className="block text-white text-sm mb-1 ml-1">
                     First Name
                   </label>
                   <input
                     type="text"
-                    id="firstName"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your first name"
+                    placeholder="John"
+                    className="p-3 rounded-lg w-full bg-gray-700 border border-gray-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500 focus:outline-none transition"
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="lastName"
-                    className="block text-gray-700 mb-2"
-                  >
+                  <label className="block text-white  text-sm mb-1 ml-1">
                     Last Name
                   </label>
                   <input
                     type="text"
-                    id="lastName"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your last name"
+                    placeholder="Doe"
+                    className="p-3 rounded-lg w-full bg-gray-700 border border-gray-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500 focus:outline-none transition"
                   />
                 </div>
               </div>
-
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your email address"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div>
+                  <label className="block text-white  text-sm mb-1 ml-1">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="john@example.com"
+                    className="p-3 rounded-lg w-full bg-gray-700 border border-gray-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500 focus:outline-none transition"
+                  />
+                </div>
+                <div>
+                  <label className="block text-white  text-sm mb-1 ml-1">
+                    Telephone
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="+1 234 567 8900"
+                    className="p-3 rounded-lg w-full bg-gray-700 border border-gray-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500 focus:outline-none transition"
+                  />
+                </div>
               </div>
-
-              <div className="mb-4">
-                <label htmlFor="phone" className="block text-gray-700 mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-
-             
-
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-700 mb-2">
-                  Message
+              <div className="mt-4">
+                <label className="block text-white  text-sm mb-1 ml-1">
+                  Your Message
                 </label>
                 <textarea
-                  id="message"
-                  rows="4"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Type your message here..."
+                  placeholder="How can we help you?"
+                  className="p-3 rounded-lg w-full bg-gray-700 border border-gray-600 focus:border-violet-500 focus:ring-1 focus:ring-violet-500 focus:outline-none transition h-32 resize-none"
                 ></textarea>
               </div>
-
-              <button
-                type="submit"
-                className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-4 rounded-lg transition-colors duration-300 font-medium"
-              >
-                Send Message
+              <button className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-6 py-3 rounded-lg mt-6 w-full md:w-auto transition-colors duration-300 flex items-center justify-center gap-2 group">
+                SEND MESSAGE
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
               </button>
-            </form>
-          </div>
-
-          {/* Contact Information */}
-          <div className="flex flex-col gap-6">
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">
-                Contact Information
-              </h2>
-
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <FaMapMarkerAlt className="text-blue-600 text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">
-                      Our Location
-                    </h3>
-                    <p className="text-gray-600 mt-1">
-                      123 Medical Center Blvd, Suite 456, Healthtown, HT 12345
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <FaPhone className="text-blue-600 text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">
-                      Phone Number
-                    </h3>
-                    <p className="text-gray-600 mt-1">(123) 456-7890</p>
-                    <p className="text-gray-600">Emergency: (123) 456-8911</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <FaEnvelope className="text-blue-600 text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">
-                      Email Address
-                    </h3>
-                    <p className="text-gray-600 mt-1">
-                      contact@healthclinic.com
-                    </p>
-                    <p className="text-gray-600">
-                      appointments@healthclinic.com
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <FaClock className="text-blue-600 text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">
-                      Hours of Operation
-                    </h3>
-                    <p className="text-gray-600 mt-1">
-                      Monday - Friday: 8:00 AM - 7:00 PM
-                    </p>
-                    <p className="text-gray-600">Saturday: 9:00 AM - 4:00 PM</p>
-                    <p className="text-gray-600">Sunday: Closed</p>
-                  </div>
-                </div>
-              </div>
             </div>
-
-            
           </div>
         </div>
-
-       
       </div>
     </section>
   );

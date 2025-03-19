@@ -1,80 +1,91 @@
-import Image from "next/image";
 import React from "react";
 
-const health = [
-  {
-    img: "/img/service__item-1.png",
-    title: "Harbor Health",
-    desc: "Et purus duis sollicitudin sed dign issim habi Et purus",
-  },
-  {
-    img: "/img/service__item-2.png",
-    title: "Harbor Health",
-    desc: "Et purus duis sollicitudin sed dign issim habi Et purus",
-  },
-  {
-    img: "/img/service__item-3.png",
-    title: "Harbor Health",
-    desc: "Et purus duis sollicitudin sed dign issim habi Et purus",
-  },
-  {
-    img: "/img/service__item-4.png",
-    title: "Harbor Health",
-    desc: "Et purus duis sollicitudin sed dign issim habi Et purus",
-  },
-];
-
 const Process = () => {
+  const steps = [
+    {
+      number: "1",
+      title: "Select Your Equipment",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      number: "2",
+      title: "Choose Your Rental Plan",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      number: "3",
+      title: "Delivery and Support System",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+  ];
+
   return (
-    <div className="py-10 md:py-16">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center">
-          {/* Header */}
-          <div className="w-full text-center mb-8 md:mb-12">
-            <h4 className=" md:text-5xl lg:text-6xl text-blue-950 text-5xl text-center mx-auto w-full mb-4 px-4 md:px-10 lg:px-20">
-              Our Treatment Process
+    <section className="   lg:h-[180vh]  px-4 md:px-16 lg:px-2 py-20 ">
+      <div className="max-w-7xl mx-auto">
+        {/* Image Container */}
+        <div className="relative bg-violet-400 rounded-xl md:rounded-[80px]">
+          <div className="border-[12px] md:border-[24px] border-violet-400 rounded-xl md:rounded-[80px] overflow-hidden">
+            <img
+              src="/img/big.jpg"
+              alt="Construction Equipment"
+              className="w-full h-auto object-cover aspect-[9/16] lg:aspect-auto rounded-xl md:rounded-[80px]"
+            />
+          </div>
+          {/* Info Box */}
+          <div className="absolute bottom-1/2 lg:bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white shadow-lg rounded-lg p-8  w-[90%] lg:w-5/6">
+            <h4 className="text-xs md:text-sm uppercase text-gray-500 font-semibold text-center">
+              How It Works
             </h4>
-          </div>
-
-          {/* Banner Image */}
-          <div className="w-full max-w-5xl mx-auto mb-16">
-            <div className="relative aspect-video w-full overflow-hidden rounded-[2.5rem]">
-              <Image
-                src="/img/banner.jpg"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
-                alt="Treatment process banner"
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
-          {health.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-[1.3rem] shadow-md p-6 md:p-8 flex flex-col items-center gap-4 md:gap-6 hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="w-16 h-16 md:w-20 md:h-20 relative">
-                <Image
-                  src={item.img}
-                  fill
-                  sizes="(max-width: 768px) 4rem, 5rem"
-                  alt={`${item.title} icon`}
-                  className="object-contain"
-                />
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 text-center mt-2">
+              How Our{" "}
+              <span className="text-violet-500 italic">Rental Process</span>{" "}
+              Works
+            </h2>
+            {/* Steps */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8  mt-6">
+              {/* Step 1 */}
+              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm  relative ">
+                <div className="bg-violet-400 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
+                  1
+                </div>
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-3">
+                  Select Your Equipment
+                </h3>
+                <p className="text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
               </div>
-              <h2 className="font-semibold text-xl md:text-2xl text-blue-950">
-                {item.title}
-              </h2>
-              <p className="text-gray-600 text-center">{item.desc}</p>
+
+              {/* Step 2 */}
+              <div className="bg-white rounded-lg p-6 border border-violet-200 shadow-sm relative">
+                <div className="bg-violet-400 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
+                  2
+                </div>
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-3">
+                  Choose Your Rental Plan
+                </h3>
+                <p className="text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm relative">
+                <div className="bg-violet-400 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
+                  3
+                </div>
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-3">
+                  Delivery and Support System
+                </h3>
+                <p className="text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

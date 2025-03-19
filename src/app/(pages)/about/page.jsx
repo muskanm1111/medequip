@@ -1,16 +1,18 @@
-import Card from '@/components/card';
-import Process from '@/components/process';
-import Testimonials from '@/components/testinomials';
+import About from '@/components/about';
+import Bar from '@/components/bar';
+import Breadcrumb from '@/components/breadcrumb';
+import Faq from '@/components/faq';
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
-    <div>
-      <Process />
-      <Card />
-      <Testimonials />
+    <div className="">
+      <Breadcrumb  Head={"ABOUT US"} pera={"ABOUT"}/>
+      <Bar />
+      <About className="bg-white py-20" />
+      <Faq className="py-20" />
     </div>
   );
 }
 
-export default page
+export default Page
