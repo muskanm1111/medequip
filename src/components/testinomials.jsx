@@ -28,11 +28,11 @@ const Testimonials = () => {
 
   return (
     <section className="bg-violet-50 py-20 px-4 md:px-16 lg:px-24">
-      <div className="max-w-7xl mx-auto text-start">
+      <div className="max-w-7xl mx-auto text-center md:text-start">
         <h4 className="text-sm uppercase text-gray-500 font-semibold">
           Testimonial
         </h4>
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2">
+        <h2 className="text-3xl  md:text-5xl  font-bold text-gray-900 mt-2">
           Feedback from Our
           <span className="text-violet-500 italic">Valued Clients</span>
         </h2>
