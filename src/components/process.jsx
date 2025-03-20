@@ -22,9 +22,9 @@ const Process = () => {
   return (
     <section className="px-4 md:px-16 lg:px-2 py-20 lg:h-[180vh]">
       <div className="max-w-7xl mx-auto">
-        {/* Main container with relative positioning */}
+      
         <div className="relative">
-          {/* Image container */}
+        
           <div className="bg-violet-400 rounded-xl md:rounded-[80px]">
             <div className="border-[12px] md:border-[24px] border-violet-400 rounded-xl md:rounded-[80px] overflow-hidden">
               <Image
@@ -37,7 +37,7 @@ const Process = () => {
             </div>
           </div>
 
-          {/* Process card - positioned below image on small screens, overlapping on large */}
+       
           <div className="relative mt-8 md:mt-12 lg:absolute lg:bottom-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:translate-y-1/2 bg-white shadow-lg rounded-lg p-6 md:p-8 w-full lg:w-5/6 mx-auto">
             <h4 className="text-xs md:text-sm uppercase text-gray-500 font-semibold text-center">
               How It Works
@@ -51,7 +51,7 @@ const Process = () => {
               Works
             </h2>
 
-            {/* Process steps grid */}
+          
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-6">
               {steps.map((step, index) => (
                 <div
