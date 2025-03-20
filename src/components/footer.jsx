@@ -8,8 +8,8 @@ export default function Footer() {
   return (
     <footer className="bg-gray-800 text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row justify-between items-center border-b border-gray-800">
-        <div className="flex items-center mb-4 sm:mb-0">
-          <div className="flex items-center mt-6 md:mt-0">
+        <div className="flex items-center mb-4 md:mt-6 sm:mb-0">
+          <div className="flex items-center mt-6 ">
             <Link
               href={"/"}
               className="bg-white  py-1 px-3 rounded-md shadow-md"
@@ -236,6 +236,24 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full py-3 mt-auto  border-t  border-gray-700 ">
+        <div className="container mx-auto px-4">
+          <div className="text-center text-base text-gray-400">
+            <p>
+              ©2025 Your{" "}
+              <a
+                href="https://xcelb2b.com/"
+                target="_blank"
+                className=" hover:text-violet-500 text-white"
+              >
+                XcelB2B
+              </a>
+              . All rights reserved.
+            </p>
           </div>
         </div>
       </div>

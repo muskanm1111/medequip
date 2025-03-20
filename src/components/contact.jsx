@@ -15,7 +15,7 @@ const Contact = ({className, className2}) => {
             height={1200}
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-violet-900/30 backdrop-blur-sm md:backdrop-blur-0"></div>
+          <div className="absolute inset-0 bg-violet-900/30 "></div>
 
           <div className="hidden md:block absolute bottom-8 left-8 right-8 bg-gray-900/80 backdrop-blur-sm p-10 rounded-xl border border-violet-500/30 shadow-lg">
             <h3 className="text-xl font-bold text-white mb-3">Get in Touch</h3>

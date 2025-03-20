@@ -102,7 +102,7 @@ export default function Faq({className} ) {
                       {item.question}
                     </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 py-4 text-base">
+                  <AccordionContent className="px-6 py-4 bg-gray-50 text-base">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
