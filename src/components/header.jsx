@@ -12,14 +12,14 @@ const Header = () => {
     <nav className="absolute    inset-0 top-5 z-10  ">
       <div className="container mx-auto max-w-[80.8rem] flex bg-white shadow px-6 py-3  justify-between items-center  rounded-2xl">
         {/* Logo */}
-        <div className="flex items-center space-x-2 ">
+        <Link href="/" className="flex items-center space-x-2 ">
           <Image
             src="/img/logo.png"
             alt="casaRoyal Logo"
             width="200"
             height="200"
           />
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-violet-400 ">

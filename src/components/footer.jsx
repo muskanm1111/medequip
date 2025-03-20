@@ -1,17 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, MapPin, Phone } from "lucide-react";
+import { Facebook, Twitter, Instagram } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-gray-400">
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row justify-between items-center border-b border-gray-800">
-     
         <div className="flex items-center mb-4 sm:mb-0">
-          <div className="flex items-center">
+          <div className="flex items-center mt-6 md:mt-0">
             <Link
               href={"/"}
               className="bg-white  py-1 px-3 rounded-md shadow-md"
@@ -26,32 +24,31 @@ export default function Footer() {
           </div>
         </div>
 
-        
-        <div className="flex">
+        <div className="flex  ">
           <Link
             href="#"
-            className="w-12 h-12 border border-gray-800 flex items-center justify-center hover:bg-violet-600 hover:border-violet-600 transition-colors"
+            className="w-12 h-12 group  border border-gray-800 flex items-center justify-center  hover:bg-violet-600 hover:border-violet-600 transition-colors"
           >
-            <Facebook className="w-5 h-5 text-white" />
+            <Facebook className="w-5 h-5 text-violet-400 group-hover:text-white" />
           </Link>
           <Link
             href="#"
-            className="w-12 h-12 border border-gray-800 border-l-0 flex items-center justify-center hover:bg-violet-600 hover:border-violet-600 transition-colors"
+            className="w-12 h-12 group border border-gray-800 border-l-0 flex items-center justify-center hover:bg-violet-600 hover:border-violet-600 transition-colors"
           >
-            <Twitter className="w-5 h-5 text-white" />
+            <Twitter className="w-5 h-5 text-violet-400 group-hover:text-white" />
           </Link>
           <Link
             href="#"
-            className="w-12 h-12 border border-gray-800 border-l-0 flex items-center justify-center hover:bg-violet-600 hover:border-violet-600 transition-colors"
+            className="w-12 h-12 group border border-gray-800 border-l-0 flex items-center justify-center hover:bg-violet-600 hover:border-violet-600 transition-colors"
           >
-            <Instagram className="w-5 h-5 text-white" />
+            <Instagram className="w-5 h-5 text-violet-400 group-hover:text-white" />
           </Link>
           <Link
             href="#"
-            className="w-12 h-12 border border-gray-800 border-l-0 flex items-center justify-center hover:bg-violet-600 hover:border-violet-600 transition-colors"
+            className="w-12 h-12 group border border-gray-800 border-l-0 flex items-center justify-center hover:bg-violet-600 hover:border-violet-600 transition-colors"
           >
             <svg
-              className="w-5 h-5 text-white"
+              className="w-5 h-5 text-violet-400 group-hover:text-white"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -61,130 +58,179 @@ export default function Footer() {
         </div>
       </div>
 
-   
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
-         
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
           <div>
             <h3 className="text-white uppercase text-sm tracking-wider font-medium mb-6">
               INFORMATION
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link
+                  href="/contact"
+                  className="hover:text-violet-400 transition-colors"
+                >
                   Our Contacts
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="hover:text-violet-400 transition-colors"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="hover:text-violet-400 transition-colors"
+                >
                   Terms and Conditions
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="hover:text-violet-400 transition-colors"
+                >
                   FAQs
                 </Link>
               </li>
             </ul>
           </div>
 
-         
           <div>
-            <h3 className="text-white uppercase text-sm tracking-wider font-medium mb-6">
-              PROPERTIES
+            <h3 className="text-white  uppercase text-sm tracking-wider font-medium mb-6">
+              EQUIPMENTS
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Commercial
+                <Link
+                  href="/products"
+                  className="hover:text-violet-400 transition-colors"
+                >
+                  Digital X-Ray System
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  House
+                <Link
+                  href="/products"
+                  className="hover:text-violet-400 transition-colors"
+                >
+                  MRI Scanner
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Office
+                <Link
+                  href="/products"
+                  className="hover:text-violet-400 transition-colors"
+                >
+                  Patient Monitor
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Residential
+                <Link
+                  href="/products"
+                  className="hover:text-violet-400 transition-colors"
+                >
+                  Anesthesia Workstation
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Residential Tower
+                <Link
+                  href="/products"
+                  className="hover:text-violet-400 transition-colors"
+                >
+                  Ultrasound System
                 </Link>
               </li>
             </ul>
           </div>
 
-        
           <div>
-            <h3 className="text-white uppercase text-sm tracking-wider font-medium mb-6">
+            <h3 className="text-white  uppercase text-sm tracking-wider font-medium mb-6">
               LOCATIONS
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Beverly Hills
+                <Link
+                  href="#"
+                  className="hover:text-violet-400 transition-colors"
+                >
+                  Delhi
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Los Angeles
+                <Link
+                  href="#"
+                  className="hover:text-violet-400 transition-colors"
+                >
+                  UK
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Mission Viejo
+                <Link
+                  href="#"
+                  className="hover:text-violet-400 transition-colors"
+                >
+                  East Delhi
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Newport Beach
+                <Link
+                  href="#"
+                  className="hover:text-violet-400 transition-colors"
+                >
+                  North Delhi
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="hover:text-violet-400 transition-colors"
+                >
                   Pasadena
                 </Link>
               </li>
             </ul>
           </div>
 
-       
           <div>
             <div className="mb-10">
-              <h3 className="text-white uppercase text-sm tracking-wider font-medium mb-6">
+              <h3 className="text-white  uppercase text-sm tracking-wider font-medium mb-6">
                 USEFUL LINKS
               </h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Blog
+                  <Link
+                    href="/products"
+                    className="hover:text-violet-400 transition-colors"
+                  >
+                    Equipments
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link
+                    href="/contact"
+                    className="hover:text-violet-400 transition-colors"
+                  >
                     Our Contacts
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-violet-400 transition-colors"
+                  >
                     Submit Listing
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link
+                    href="/contact"
+                    className="hover:text-violet-400 transition-colors"
+                  >
                     Support
                   </Link>
                 </li>
