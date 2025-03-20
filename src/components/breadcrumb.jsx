@@ -4,7 +4,7 @@ import React from 'react'
 
 const Breadcrumb = ({Head, pera}) => {
   return (
-    <div className="container mx-auto px-4 py-12 pt-36 bg-violet-50 ">
+    <div className="w-full mx-auto px-4 py-12 pt-36 bg-violet-50 ">
       <h1 className="text-4xl font-semibold text-center mt-10 mb-6">{Head}</h1>
 
       {/* Breadcrumb */}

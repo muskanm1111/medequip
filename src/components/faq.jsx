@@ -1,14 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
+
 
 export default function Faq({className} ) {
 
@@ -53,10 +52,9 @@ export default function Faq({className} ) {
   };
 
   return (
-    <div className={`bg-violet-50  ${className}`}>
+    <div className={`bg-violet-50 py-20  ${className}`}>
       <div className="max-w-7xl mx-auto px-4 py-12 ">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-         
           <div className="space-y-6">
             <div className="space-y-1">
               <h3 className="text-lg font-medium text-muted-foreground">
@@ -74,16 +72,12 @@ export default function Faq({className} ) {
               tellus, luctus nec
             </p>
             <div>
-              <Button
-                className="bg-violet-500 hover:bg-violet-500 text-white"
-                size="lg"
-              >
-                SEE MORE FAQS
-              </Button>
+              <button className="px-4 text-lg z-30 py-2 bg-violet-400 rounded-md text-white relative font-semibold after:-z-20 after:absolute after:h-1 after:w-1 after:bg-violet-800 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 [text-shadow:3px_5px_2px_#8b5cf6;] hover:[text-shadow:2px_2px_2px_#8b5cf6] ">
+                See More FAQ&apos;s
+              </button>
             </div>
           </div>
 
-        
           <div className="space-y-4">
             <Accordion
               type="single"

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -17,33 +18,31 @@ const Header = () => {
             alt="casaRoyal Logo"
             width="200"
             height="200"
-           
           />
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-violet-400 ">
-          <a href="/" className="text-black hover:text-violet-500">
+          <Link href="/" className="text-black hover:text-violet-500">
             HOME
-          </a>
-          <a href="/about" className=" text-black hover:text-violet-500">
+          </Link>
+          <Link href="/about" className=" text-black hover:text-violet-500">
             ABOUT
-          </a>
-          <a href="/products" className="text-black hover:text-violet-500">
-            EQUIPMENT 
-          </a>
+          </Link>
+          <Link href="/products" className="text-black hover:text-violet-500">
+            EQUIPMENT
+          </Link>
           {/* <a href="#" className="text-black hover:text-violet-500">
             PAGES <span className="text-sm">▼</span>
           </a> */}
-          <a href="/contact" className="text-black hover:text-violet-500">
+          <Link href="/contact" className="text-black hover:text-violet-500">
             CONTACT US
-          </a>
+          </Link>
         </div>
 
-      
         <div className="hidden md:block">
           <button className="bg-violet-500 hover:bg-violet-600 text-white px-6 py-2 rounded-lg font-semibold">
-            MAKE APPOINTMENT
+            APPOINTMENT
           </button>
         </div>
 
@@ -61,24 +60,42 @@ const Header = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-center space-y-4 mt-4 text-violet-400 font-semibold bg-violet-100 py-4 rounded-lg">
-          <a href="#" className="text-violet-500 hover:text-violet-300">
+          <Link
+            onClick={() => setIsOpen(false)}
+            href="/"
+            className="text-violet-500 hover:text-violet-300"
+          >
             HOME
-          </a>
-          <a href="#" className="hover:text-violet-300">
+          </Link>
+          <Link
+            onClick={() => setIsOpen(false)}
+            href="/about"
+            className="hover:text-violet-300"
+          >
             ABOUT
-          </a>
-          <a href="#" className="hover:text-violet-300">
+          </Link>
+          <Link
+            onClick={() => setIsOpen(false)}
+            href="/products"
+            className="hover:text-violet-300"
+          >
             EQUIPMENT
-          </a>
-          <a href="#" className="hover:text-violet-300">
-            PAGES
-          </a>
-          <a href="#" className="hover:text-violet-300">
+          </Link>
+
+          <Link
+            onClick={() => setIsOpen(false)}
+            href="/contact"
+            className="hover:text-violet-300"
+          >
             CONTACT US
-          </a>
-          <button className="bg-violet-400 hover:bg-violet-500 text-white px-6 py-2 rounded-lg font-semibold">
-            MAKE APPOINTMENT
-          </button>
+          </Link>
+          <Link
+            onClick={() => setIsOpen(false)}
+            href="/contact"
+            className="bg-violet-400 hover:bg-violet-500 text-white px-6 py-2 rounded-lg font-semibold"
+          >
+            APPOINTMENT
+          </Link>
         </div>
       )}
     </nav>

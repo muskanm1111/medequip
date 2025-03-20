@@ -1,12 +1,41 @@
+"use client"
 import Image from "next/image";
 import { Play } from "lucide-react";
+import { useState } from "react";
 
 export default function Home() {
+
+  const [formData, setFormData] = useState({
+    branch: "",
+    category: "",
+    manufacturer: "",
+  });
+
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData({
+    ...formData,
+    [name]: value,
+  });
+};
+
+// Handle form submission
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log("Form submitted with data:", formData);
+
+
+  alert("Search submitted with: " + JSON.stringify(formData));
+};
+
+ const branches = ["New York", "Los Angeles", "Chicago", "Houston", "Miami"];
+ const categories = ["Electronics", "Clothing", "Food", "Furniture", "Books"];
+ const manufacturers = ["Samsung", "Apple", "Sony", "LG", "Dell", "HP"];
+
   return (
-    <div className=" min-h-screen mt-28">
+    <div className=" min-h-screen mt-28 py-6 z-[10]">
       <div className="max-w-7xl mx-auto px-4 py-8 md:py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-        
           <div className="lg:col-span-4 space-y-4 order-1 ">
             <h3 className="text-sm sm:text-base md:text-lg uppercase font-medium tracking-wide">
               WELCOME TO medequip
@@ -21,14 +50,13 @@ export default function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
               tellus, luctus nec ullamcorper.
             </p>
-            <button className="bg-violet-500 hover:bg-violet-600 text-white font-medium py-3 px-8 rounded-lg transition-colors">
+            <button className="bg-violet-500 hover:bg-violet-800 text-white font-medium py-3 px-8 rounded-lg transition-colors">
               DISCOVER MORE
             </button>
 
             <p className="text-sm text-gray-600">Trusted by 2k+ Client</p>
           </div>
 
-        
           <div className="lg:col-span-5 order-2 lg:order-2 mt-6 lg:mt-0">
             <div className="relative bg-violet-500 rounded-lg  h-[300px] sm:h-[400px] md:h-[500px]">
               <Image
@@ -48,7 +76,6 @@ export default function Home() {
             </div>
           </div>
 
-        
           <div className="lg:col-span-3 order-3 lg:order-3">
             <div className="bg-gray-100 rounded-lg p-6 shadow-sm">
               <div className="relative w-full h-40 mb-6 rounded-xl overflow-hidden">
@@ -68,10 +95,20 @@ export default function Home() {
 
               <h3 className="text-xl font-bold mb-4">Find Equipment</h3>
 
-              <div className="space-y-4">
-                <div className="relative">
-                  <select className="w-full p-3 bg-white border border-gray-200 rounded-lg appearance-none pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500">
-                    <option>All Branch</option>
+              <form onSubmit={handleSubmit} className="space-y-4 ">
+                <div className="relative z-[1000]">
+                  <select
+                    name="branch"
+                    value={formData.branch}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-white border z-[1000] border-gray-200 rounded-lg appearance-none pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  >
+                    <option value="">All Branch</option>
+                    {branches.map((branch, index) => (
+                      <option key={index} value={branch}>
+                        {branch}
+                      </option>
+                    ))}
                   </select>
                   <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                     <svg
@@ -90,9 +127,19 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="relative">
-                  <select className="w-full p-3 bg-white border border-gray-200 rounded-lg appearance-none pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500">
-                    <option>All Category</option>
+                <div className="relative z-[1000]">
+                  <select
+                    name="category"
+                    value={formData.category}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-white border border-gray-200 rounded-lg appearance-none pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  >
+                    <option value="">All Category</option>
+                    {categories.map((category, index) => (
+                      <option key={index} value={category}>
+                        {category}
+                      </option>
+                    ))}
                   </select>
                   <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                     <svg
@@ -111,9 +158,19 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="relative">
-                  <select className="w-full p-3 bg-white border border-gray-200 rounded-lg appearance-none pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500">
-                    <option>All Manufacturer</option>
+                <div className="relative z-[1000]">
+                  <select
+                    name="manufacturer"
+                    value={formData.manufacturer}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-white border border-gray-200 rounded-lg appearance-none pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  >
+                    <option value="">All Manufacturer</option>
+                    {manufacturers.map((manufacturer, index) => (
+                      <option key={index} value={manufacturer}>
+                        {manufacturer}
+                      </option>
+                    ))}
                   </select>
                   <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                     <svg
@@ -132,10 +189,13 @@ export default function Home() {
                   </div>
                 </div>
 
-                <button className="w-full bg-violet-500 hover:bg-violet-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                <button
+                  type="submit"
+                  className="w-full z-[1000] bg-violet-500 hover:bg-violet-600 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                >
                   SEARCH
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>

@@ -31,7 +31,7 @@ const features = [
 
 export default function About({className}) {
   return (
-    <div className={`bg-violet-50 min-h-screen ${className}`}>
+    <div className={`bg-violet-50 py-20 min-h-screen ${className}`}>
       <div className="max-w-7xl mx-auto px-4 py-8 md:py-12 lg:py-16">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-12">
@@ -46,7 +46,6 @@ export default function About({className}) {
           </div>
         </div>
 
-        
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Left Image Section */}
           <div className="lg:col-span-5">
@@ -62,8 +61,7 @@ export default function About({className}) {
             </div>
           </div>
 
-          
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 py-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {features.map((feature, index) => (
                 <FeatureCard key={index} {...feature} />
